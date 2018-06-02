@@ -1,0 +1,9 @@
+nav{position:relative;padding:30px 0px 30px 0px;margin-bottom:50px;text-align:center;border-bottom:5px solid black;}
+.current{background-color:#D1FAF4;color:black;}
+nav li{display:inline-block;}
+nav a{text-decoration:none;display:block;padding:10px;color:black;}
+nav a:hover{background-color:#D1FAF4;text-decoration:none;}
+@media (max-width:540px){nav{position:static;}
+}
+@media (max-width:390px){nav li{display:block;}
+}

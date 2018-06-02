@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Phillip Mai</title>
+	<meta name="description" content="My name is Phillip Mai and I am working towards becoming a data scientist."/>
+
+<!--Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="C:\Users\newuser\Desktop\website\pictures\favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="C:\Users\newuser\Desktop\website\pictures\favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="C:\Users\newuser\Desktop\website\pictures\favicon/favicon-16x16.png">
+	<link rel="manifest" href="C:\Users\newuser\Desktop\website\pictures\favicon/site.webmanifest">
+	<link rel="mask-icon" href="C:\Users\newuser\Desktop\website\pictures\favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+<!--Bootstrap/API/css files -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400;300" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/navigation.css">
+
+	<script type="text/javascript">
+// For Google Analytics
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-63612769-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+<!-- Google maps API -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHSvAxpdzTchkrNQyo4iRVbNKMyc43AEE">
+	</script>
+	<script>
+		function initialize() {
+			var honolulu = { lat: 21.3186, lng: -157.9225 };
+			var list = [ 
+			honolulu,
+			//Atlanta
+			{lat:33.7489954, lng:-84.3879824},
+			// Baltimore
+			{lat: 39.299236, lng: -76.609383},
+			// Buffalo
+			{lat: 42.9047, lng: -78.8494},
+			// Chicago
+			{lat: 41.8369, lng: -87.6847},
+			// Cleveland
+			{lat: 41.49932, lng: -81.6943605},
+			// Cleveland,TN
+			{lat: 35.1595182, lng: -84.87661149},
+			// Columbus
+			{lat: 39.9611755, lng: -82.9987942},
+			// D.C.
+			{lat: 38.9047, lng: -77.0164},
+			// Dallas
+			{lat:32.7766642, lng:-96.7969879},
+			// Houston
+			{lat:29.7604267, lng:-95.3698028},
+			// KC
+			{lat:39.0997265, lng:-94.5785667},
+			// L.A.
+			{lat: 33.9425, lng: -118.4081},
+			// Little Rock
+			{lat:34.7464809, lng: -92.28959479},
+			// Maui
+			{lat: 20.8986, lng: -156.4306},
+			// Milwaukee
+			{lat:43.0389025, lng:-87.9064736},
+			// NYC
+			{lat: 40.7127, lng: -74.0059},
+			// New Jersey
+			{lat: 40, lng: -74.5},
+			// Orlando
+			{lat: 28.5383355, lng: -81.37923649},
+			// Philadelphia
+			{lat: 39.95, lng: -75.1667},
+			// Rehoboth Beach
+			{lat: 38.72094539, lng: -75.07601369},
+			// Saint Louis
+			{lat: 38.6272, lng: -90.1978},
+			// San Diego
+			{lat: 32.7150, lng: -117.1625},
+			// San Fran
+			{lat: 37.7883, lng: -122.4167},
+			// Seattle
+			{lat:47.6062095, lng:-122.3320708},
+			// Shreveport
+			{lat:32.5251516, lng:-93.750179},
+			// Tampa
+			{lat: 27.9505749, lng: -82.45717760},
+			// Toronto
+			{lat: 43.7, lng: -79.4},
+			// Vegas
+			{lat: 36.1215, lng: -115.1739},
+
+			
+			// Starting International
+			// Guangzhou
+			{lat: 23.1333, lng: 113.2667},
+			// Hong Kong
+			{lat: 22.2783, lng: 114.1747},
+			// Japan
+			{lat: 35.6833, lng: 139.7667}
+
+			];
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+			    zoom: 2,
+			    center: {lat: 40.433, lng: -3.7}
+			  });
+
+			  // Add a marker at the center of the map.
+			  addMarkers(list, map);
+			}
+
+		function addMarkers(list, map) {
+			for (var i=0; i < list.length; i++) {
+				var marker = new google.maps.Marker({
+					position: { lat: list[i]['lat'], lng: list[i]['lng'] },
+					map: map
+				});
+				// console.log(list[i]['lat']);
+			}
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+</head>
+
+<body>
+
+	<header>
+		<a href="index.html" style="text-decoration: none;">
+			<h1>Phillip Mai</h1>
+			<p>Aspiring Data Scientist</p>
+		</a>
+	</header>
+
+<!--Navigation bar-->
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Home</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#certs">Certifications</a></li>
+				<li><a href="#aboutme">Fun Facts</a></li>
+				<li><a href="C:\Users\newuser\Desktop\website\resume\mai_resume.doc" target="_blank">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+<!-- Start of the body -->
+	<div class="container">
+			<h2 class="center-text">About Me</h2>
+				<p class="block-text">Currently holding an MIS degree, Phillip works as a senior IT Advisor at a global firm specializing in services in IT SOX compliance, service organization attestation under SSAE16 reporting standards, and NSA Readiness and Vulnerability Assessments.</p>
+				<p class="block-text"> Phillip is also working towards a computer science degree, with a focus on Java and Python, and a projected completion date in December 2018. His path and goals are to use his knowledge and skillset to become a data scientist.
+				</p>
+			<hr/>
+
+<!-- Start Projects -->
+			<h2 class="center-text" id="projects">My Recent Projects</h2>
+				<div class="tri-divide">
+					<div class="subcontainer1">
+						<a href="https://github.com/studentlearnercoursera/Statistical-Inference" target="_blank">
+							<figcaption class="center-text"> Statistical Inference</figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\stat_inference.png" alt="Statistical_inference" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+				<div class="tri-divide">
+					<div class="subcontainer2">
+						<a href="https://github.com/studentlearnercoursera/Practical-Machine-Learning" target="_blank">
+							<figcaption class="center-text">Practical Machine Learning</figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\practical_ml.png" alt="Practical_Machine_Learning" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+				<div class="tri-divide">
+					<div class="subcontainer3">
+						<a href="https://github.com/studentlearnercoursera/Reproducible-Research-proj1" target="_blank">
+							<figcaption class="center-text">Reproducible Research</figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\Reproducible_Research.png" alt="Reproducible_Research" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+		<hr/>
+
+<!-- Start Certifications -->
+			<h2 class="center-text" id="certs">My Certifications</h2>
+			<div class="center-text2">
+				<div class="tri-divide">
+					<div class="subcontainer1">
+						<a href="" target="_blank">
+							<figcaption class="center-text">Appian Analyst</figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\appian.png" alt="Appian Certification" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+				<div class="tri-divide">
+					<div class="subcontainer2">
+						<a href="" target="_blank">
+							<figcaption class="center-text">SAS® Certified Base Programmer</figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\SAS.png" alt="SAS Base Programmer 9" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+				<div class="tri-divide">
+					<div class="subcontainer3">
+						<a href="" target="_blank">
+							<figcaption class="center-text">Lean Six Sigma - Yellow Belt </figcaption>
+							<p></p>
+							<img src="C:\Users\newuser\Desktop\website\pictures\LSS.png" alt="Six Sigma Yellow Belt" class="img-responsive" />
+						</a>
+					</div>
+				</div>
+			</div>
+		<hr/>
+
+<!-- About Me -->
+	<h2 class="center-text" id="aboutme">Facts about me</h2>
+		<ul style="line-height: 2.5;">
+			<li>I was raised in Hawai`i and moved to St. Louis to experience a new culture. Being in t. Louis for 7 years, I'm now looking for a new place to call home.</li>
+			<li>In my free time, I'm usually honing in on my coding skills or I'm out playing tennis. </li>
+			<li>I love to eat and especially trying out new restaurants that are opening up. Some would call me a Foodie.</li>
+			<li>Open to new ideas and experiences. I think it's important to view situations with more than just one pair of eyes.</li>
+			<li>I'm an adventuorus individual. I've been all over the U.S. and a few international locations. See below for a map of all the places I've been! If you have any recommendations on where I could go next, let me know</li>
+		</ul>
+
+	<hr/>
+
+<!-- Maps -->
+	<h2 class="center-text">Places where I have been</h2>
+			<div style="height:500px;">
+			<div id='map'> </div>
+			</div>
+	<hr/>
+
+<!-- Contact Me -->
+	<h1 class="center-text"> Contact Me </h1>
+		<div class="half-divide">
+				<div class="subcontainer1">
+					<h2 class="center-text">Contact information</h2>
+					<p>
+						<strong>Phillip Mai</strong>
+						<br/>720 Olive St. #225
+						<br/>St. Louis, MO 63101
+						<br/><a href="mailto:pmai2038@gmail.com">pmai2038@gmail.com</a>
+						<div class="btn">
+							<a href="C:\Users\newuser\Desktop\website\resume\mai_resume.doc" target="_blank" class="btn-text"><strong>RESUME</strong></a>
+						</div>
+					</p>
+				</div>
+			</div>
+
+<!-- Professional Image -->
+	<div class="half-divide">
+		<div class="subcontainer2">
+			<img src="attachments/images/profile.jpg" alt="Profile image" class="img-responsive">
+		</div>
+	</div>
+	<hr/>
+
+<!-- Form -->
+	<h2 class="center-text" id="contact">Reach out to me directly</h2>
+
+		<form method="post" action="submitform.php">
+				<div class="form-group">
+					<label for="firstname">First name</label>
+						<input type="text" class="form-control" name="firstname" placeholder="First name" required>
+				</div>
+				<div class="form-group">
+					<label for="lastname">Last name</label><br/>
+						<input type="text" class="form-control" name="lastname" placeholder="Last name" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+						<input type="email" class="form-control" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="subject">Subject</label>
+						<input type="text" class="form-control" name="subject" required>
+				</div>
+				<div class="form-group">
+					<label for="message">Message</label>
+						<textarea name="message" class="form-control" rows="5" required></textarea>
+				</div>
+			<div class="center-text">
+				<button type="submit" class="btn btn-primary">Send</button>
+			</div>
+		</form>
+	</div>
+<!-- End of Body -->
+
+	<footer>
+		<nav>
+			<ul>
+				<li class="current"><a href="#top">Home</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#certs">Certifications</a></li>
+				<li><a href="#aboutme">Fun Facts</a></li>
+				<li><a href="C:\Users\newuser\Desktop\website\resume\mai_resume.doc" target="_blank">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="center-text">&copy; 2017 Phillip Mai. All rights reserved.</div>
+	</footer>
+
+</body>
+</html>
